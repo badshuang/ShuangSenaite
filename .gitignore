@@ -1,0 +1,33 @@
+# Docker-related files
+/senaite.docker/latest/data/
+
+# Buildout generated files
+.installed.cfg
+.mr.developer.cfg
+bin/
+develop-eggs/
+downloads/
+eggs/
+parts/
+var/
+
+# Python virtual environment
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[co]
+
+# Log and PID files
+*.log
+*.pid
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
