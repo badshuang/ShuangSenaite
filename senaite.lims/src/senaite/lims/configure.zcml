@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+
+  <five:registerPackage package="." initialize=".initialize"/>
+
+  <!-- Package Includes -->
+  <include package=".upgrades"/>
+
+  <!-- pre-install handler -->
+  <genericsetup:registerProfile
+      name="default"
+      title="SENAITE LIMS"
+      directory="profiles/default"
+      description="SENAITE LIMS Add-on"
+      pre_handler="senaite.lims.setuphandlers.pre_install"
+      provides="Products.GenericSetup.interfaces.EXTENSION"/>
+
+  <!-- setup handler -->
+  <genericsetup:importStep
+      name="senaite.lims.setupHandler"
+      title="SENAITE LIMS: Run Setup Handler"
+      description="Run various configuration actions"
+      handler="senaite.lims.setuphandlers.setup_handler"/>
+
+</configure>

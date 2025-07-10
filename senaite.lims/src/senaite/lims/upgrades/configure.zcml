@@ -1,0 +1,70 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="senaite.lims">
+
+  <genericsetup:upgradeStep
+      title="Upgrade SENAITE LIMS"
+      description="Version 2.7.0"
+      source="2600"
+      destination="2700"
+      handler="senaite.lims.upgrades.handlers.to_2700"
+      profile="senaite.lims:default" />
+
+  <genericsetup:upgradeStep
+      title="Upgrade SENAITE LIMS"
+      description="Version 2.6.0"
+      source="2500"
+      destination="2600"
+      handler="senaite.lims.upgrades.handlers.to_2600"
+      profile="senaite.lims:default" />
+
+  <genericsetup:upgradeStep
+      title="Upgrade SENAITE LIMS"
+      description="Version 2.5.0"
+      source="2400"
+      destination="2500"
+      handler="senaite.lims.upgrades.handlers.to_2500"
+      profile="senaite.lims:default" />
+
+  <genericsetup:upgradeStep
+      title="Upgrade SENAITE LIMS"
+      description="Version 2.4.0"
+      source="2300"
+      destination="2400"
+      handler="senaite.lims.upgrades.handlers.to_2400"
+      profile="senaite.lims:default" />
+
+  <genericsetup:upgradeStep
+      title="Upgrade SENAITE LIMS"
+      description="Version 2.3.0"
+      source="2200"
+      destination="2300"
+      handler="senaite.lims.upgrades.handlers.to_2300"
+      profile="senaite.lims:default" />
+
+  <genericsetup:upgradeStep
+      title="Upgrade SENAITE LIMS"
+      description="Version 2.2.0"
+      source="2100"
+      destination="2200"
+      handler="senaite.lims.upgrades.handlers.to_2200"
+      profile="senaite.lims:default" />
+
+  <genericsetup:upgradeStep
+      title="Upgrade SENAITE LIMS"
+      description="Version 2.1.0"
+      source="*"
+      destination="2100"
+      handler="senaite.lims.upgrades.handlers.to_2100"
+      profile="senaite.lims:default" />
+
+  <genericsetup:upgradeStep
+      title="Upgrade SENAITE LIMS"
+      description="Version 1.3.3.2"
+      source="*"
+      destination="1332"
+      handler="senaite.lims.upgrades.handlers.to_latest"
+      profile="senaite.lims:default" />
+
+</configure>
